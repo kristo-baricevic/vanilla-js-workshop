@@ -27,6 +27,7 @@ const Router = {
                 pageElement.textContent = "Your Order";
                 break;
         }
+        document.querySelectorAll("main").innerHTML = "";
         document.querySelectorAll("main").appendChild(pageElement);
 
 
