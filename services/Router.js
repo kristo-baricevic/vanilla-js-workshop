@@ -27,11 +27,13 @@ const Router = {
                 pageElement.textContent = "Your Order";
                 break;
         }
-        document.querySelectorAll("main").innerHTML = "";
-        document.querySelectorAll("main").appendChild(pageElement);
-
-
-
+        if (pageElement) {
+            const cache = document.querySelectorAll("main");
+            cache.innerHTML = "";
+            cache.appendChild(pageElement);
+            window.scrollX = 0;
+            window.scrollY = 0;
+        }
     }
 }
 export default Router;
