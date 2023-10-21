@@ -1,21 +1,21 @@
 import { getProductById } from '../services/Menu.js';
 import { addToCart } from '../services/Order.js';
 
-export class DetailsPage extends HTMLElement {
+export class DetailPage extends HTMLElement {
 
     constructor() {
         super();
     
         this.root = this.attachShadow({ mode: "open" });
     
-        const template = document.getElementById("details-page-template");
+        const template = document.getElementById("detail-page-template");
         const content = template.content.cloneNode(true);
         const styles = document.createElement("style");
         this.root.appendChild(content);    
         this.root.appendChild(styles);
 
         async function loadCSS() {
-          const request = await fetch("/components/DetailsPage.css");
+          const request = await fetch("/components/DetailPage.css");
           styles.textContent = await request.text();
         }
         loadCSS();
@@ -43,4 +43,4 @@ export class DetailsPage extends HTMLElement {
 
 }
 
-customElements.define("details-page", DetailsPage);
+customElements.define("detail-page", DetailPage);

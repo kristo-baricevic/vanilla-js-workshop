@@ -31,7 +31,7 @@ const Router = {
                 break;
             default:
                 if (route.startsWith("/product-")) {
-                    pageElement = document.createElement("details-page");
+                    pageElement = document.createElement("detail-page");
                     const paramId = route.substring(route.lastIndexOf("-")+1);
                     pageElement.dataset.productId = paramId;
                 }
