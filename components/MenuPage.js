@@ -23,6 +23,7 @@ export class NewPage extends HTMLElement {
         window.addEventListener("appmenuchange", () => {
             this.render();
         });
+        this.render();
     }
 
     render() {
