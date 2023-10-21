@@ -7,6 +7,7 @@ import Router from "./services/Router";
 import { MenuPage } from "./components/MenuPage.js";
 import { OrderPage } from "./components/OrderPage.js";
 import { DetailsPage } from "./components/DetailPage.js";
+import ProductItem from "./components/ProductItem";
 
 
 window.app = {}
