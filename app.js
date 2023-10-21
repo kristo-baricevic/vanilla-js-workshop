@@ -6,7 +6,7 @@ import Router from "./services/Router";
 //Important my components
 import { MenuPage } from "./components/MenuPage.js";
 import { OrderPage } from "./components/OrderPage.js";
-import { DetailsPage } from "./components/DetailsPage.js";
+import { DetailsPage } from "./components/DetailPage.js";
 
 
 window.app = {}

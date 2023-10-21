@@ -11,4 +11,4 @@ export class NewPage extends HTMLElement {
         this.appendChild(content);
     }
 }
-customElements.define("details-page", DetailsPage);
+customElements.define("detail-page", DetailPage);
