@@ -35,6 +35,12 @@ export class NewPage extends HTMLElement {
                     </ul>
                 `;
                 this.root.querySelector("menu").appendChild(liCategory);
+
+                category.products.forEach(product => {
+                    const item = document.createElement("product-item");
+                    item.dataset.product = JSON.stringify(product);
+                    liCategory.querySelector("ul").appendChild(item);
+                });
             }
         } else {
             this.root.querySelector("menu").innerHTML = "loading...";
