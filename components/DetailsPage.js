@@ -3,4 +3,3 @@ class NewPage extends HTMLElement {
         super();
     }
 }
-customElements.define("details-page", DetailsPage);
