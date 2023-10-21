@@ -10,7 +10,7 @@ const Router = {
         // Event Handler for URL changes
         window.addEventListener("popstate", event => {
             Router.go(event.state.route, false);
-        })
+        });
 
         // Check the initial URL
         Router.go(location.pathname);
@@ -30,18 +30,23 @@ const Router = {
                 pageElement = document.createElement("order-page");
                 break;
             default:
-                if(route.startsWith("/product-")) {
+                if (route.startsWith("/product-")) {
                     pageElement = document.createElement("details-page");
                     const paramId = route.substring(route.lastIndexOf("-")+1);
-                    pageElement.dataset.id = paramId;
+                    pageElement.dataset.productId = paramId;
                 }
         }
         if (pageElement) {
-            const cache = document.querySelectorAll("main");
+            const cache = document.querySelector("main");
             cache.innerHTML = "";
             cache.appendChild(pageElement);
             window.scrollX = 0;
             window.scrollY = 0;
+
+        } else {
+            // 404
+            document.querySelector("main").innerHTML = "Oops, 404!"
+
         }
     }
 }
