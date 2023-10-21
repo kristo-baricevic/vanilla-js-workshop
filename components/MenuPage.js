@@ -29,7 +29,7 @@ export class NewPage extends HTMLElement {
         if (app.store.menu) {
             for (let category of app.store.menu) {
                 const liCategory = document.createElement("li");
-                liCatergory.innerHTML = `
+                liCategory.innerHTML = `
                     <h3>${category.name}</h3>
                     <ul class='category'>
                     </ul>
